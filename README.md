@@ -9,7 +9,7 @@ Install script for the BitCurator distro tools and configuration files
 
 This repo provides a simple bash script to download the relevant components and build the BitCurator environment using the salt states and supporting files provided by https://github.com/bitcurator/bitcurator-distro-salt.
 
-Visit https://github.com/BitCurator/bitcurator-distro/wiki/Releases to download the latestofficial release!
+Visit https://github.com/BitCurator/bitcurator-distro/wiki/Releases to download the latest official release!
 
 ## Pre-Installation Steps
 
