@@ -5,7 +5,6 @@ Install script for the BitCurator distro tools and configuration files
 
 [![GitHub issues](https://img.shields.io/github/issues/bitcurator/bitcurator-distro-installer.svg)](https://github.com/bitcurator/bitcurator-distro-installer/issues)
 [![GitHub forks](https://img.shields.io/github/forks/bitcurator/bitcurator-distro-installer.svg)](https://github.com/bitcurator/bitcurator-distro-installer/network)
-[![Build Status](https://travis-ci.org/BitCurator/bitcurator-distro-installer.svg?branch=master)](https://travis-ci.org/BitCurator/bitcurator-distro-installer)
 [![Twitter Follow](https://img.shields.io/twitter/follow/bitcurator.svg?style=social&label=Follow)](https://twitter.com/bitcurator)
 
 This repo provides a simple bash script to download the relevant components and build the BitCurator environment using the salt states and supporting files provided by https://github.com/bitcurator/bitcurator-distro-salt.
