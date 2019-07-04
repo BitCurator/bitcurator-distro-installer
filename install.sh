@@ -34,8 +34,6 @@ service salt-minion stop
 
 echoinfo " Getting latest BitCurator release files..."
 git clone https://github.com/bitcurator/bitcurator-distro-salt /srv/salt
-cd /srv/salt
-git checkout ENHANCEMENT-install
 
 echoinfo " Installing BitCurator tools and scripts..."
 salt-call -l info --local state.sls bitcurator.primary pillar='{"bitcurator_version": "dev", "bitcurator_user": '$USERID'}'
