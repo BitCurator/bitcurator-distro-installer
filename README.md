@@ -7,13 +7,13 @@ Install script for the BitCurator distro tools and configuration files
 [![GitHub forks](https://img.shields.io/github/forks/bitcurator/bitcurator-distro-installer.svg)](https://github.com/bitcurator/bitcurator-distro-installer/network)
 [![Twitter Follow](https://img.shields.io/twitter/follow/bitcurator.svg?style=social&label=Follow)](https://twitter.com/bitcurator)
 
-This repo provides a simple bash script to download the relevant components and build the BitCurator environment using the salt states and supporting files provided by https://github.com/bitcurator/bitcurator-distro-salt.
+This repo provides a simple bash script to download the relevant components and build the BitCurator environment in Ubuntu 18.04LTS using the salt states and supporting files provided by https://github.com/bitcurator/bitcurator-distro-salt.
 
 Visit https://github.com/BitCurator/bitcurator-distro/wiki/Releases to download the latest official release!
 
 ## Pre-Installation Steps
 
-Create a fresh Ubuntu 18.04LTS environment in a VM or on a dedicated host. To replicate the official release, use the hostname "bitcurator" and create a user named "bcadmin". However, you may use any hostname and username you wish in the following steps. Log in and execute the following in a terminal:
+Create a fresh Ubuntu 18.04LTS environment in a VM or on a dedicated host. Official releases are created with the hostname **bitcurator** and the username **bcadmin**, but you may use any desired hostname and username. Log in and execute the following in a terminal:
 
 ```shell
 sudo apt-get update
