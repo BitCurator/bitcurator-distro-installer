@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Installer for tools included with BitCurator. BitCurator also 
+# provides desktop customizations (desktop folder icons, an appindicator 
+# to disable USB write access, and a custom background) for an existing 
+# user.
+
 #--- FUNCTION ---------------------------------------------------------
 # NAME: echoinfo
 # DESCRIPTION: Echo information to stdout.
@@ -13,17 +18,27 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-echoinfo " ***********************************************************"
-echoinfo "                                                            "
-echoinfo " BitCurator provides desktop customizations (desktop folder "
-echoinfo " icons, an appindicator to disable USB write access, and a  "
-echoinfo " custom background) for an existing user. Please enter the  "
-echoinfo " username now.                                              "
-echoinfo "                                                            "
-echoinfo " ***********************************************************"
-echoinfo "                                                            "
+USERID=root
 
-read -p " Enter username: " USERID
+# Minimal request does nothing right now, as main install
+# is the same as minimal install
+while getopts ":u:" opt; do
+  case ${opt} in
+    u )
+      USERID=${OPTARG}
+      ;;
+    \? ) 
+      echo "Usage: install.sh -u username"
+      ;;
+  esac
+done
+shift $((OPTIND -1))
+
+if [ "$USERID" == "root" ];
+then
+  echo "No username supplied, or username root not allowed."
+  exit 1
+fi
 
 echoinfo " Installing git..."
 apt-get install -y git

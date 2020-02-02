@@ -23,15 +23,19 @@ sudo apt install git
 
 ## Simple install
 
-You can install all of the BitCurator tools and desktop support files for any user with our dedicated installation script. Simply run the following in a terminal:
+You can install all of the BitCurator tools and desktop support files for any user with our dedicated installation script. First, run the following in a terminal:
 
 ```shell
 git clone https://github.com/bitcurator/bitcurator-distro-installer
 cd bitcurator-distro-installer
-sudo ./install.sh
 ```
 
-You will be prompted for a username corresponding to an existing user. Type the username and hit enter. Note! The installation may take an hour or longer to complete.
+Next, run the following, replacing "username" with the username of an existing user.
+Note! The installation may take an hour or longer to complete.
+
+```shell
+sudo ./install.sh -u username
+```
 
 ## BitCurator documentation, help, and other information
 
