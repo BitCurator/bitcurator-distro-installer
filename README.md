@@ -30,12 +30,18 @@ git clone https://github.com/bitcurator/bitcurator-distro-installer
 cd bitcurator-distro-installer
 ```
 
-Next, run the following, replacing "username" with the username of an existing user.
-Note! The installation may take an hour or longer to complete.
+To install the latest release of BitCurator, run the following, replacing "username" with the username of an existing user. Note! The installation may take an hour or longer to complete.
 
 ```shell
 sudo ./install.sh -u username
 ```
+
+If you would like to install a specific (older) release, you can specify a release tag during installation:
+```shell
+sudo ./install.sh -u username -t vX.X.X
+```
+
+where "vX.X.X" is one of the releases listed at https://github.com/BitCurator/bitcurator-distro-salt/releases.
 
 ## BitCurator documentation, help, and other information
 

@@ -19,11 +19,15 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 USERID=root
+REQUESTEDTAG=none
 
 # Minimal request does nothing right now, as main install
 # is the same as minimal install
-while getopts ":u:" opt; do
+while getopts ":t:u:" opt; do
   case ${opt} in
+    t )
+      REQUESTEDTAG=${OPTARG}
+      ;;
     u )
       USERID=${OPTARG}
       ;;
@@ -47,10 +51,24 @@ echoinfo " Installing salt..."
 apt-get install -y salt-minion
 service salt-minion stop
 
-echoinfo " Getting latest BitCurator release files..."
+echoinfo " Getting BitCurator salt repo..."
 git clone https://github.com/bitcurator/bitcurator-distro-salt /srv/salt
+cd /srv/salt
+git fetch --tags
 
+if [ "$REQUESTEDTAG" == "none" ];
+then
+  echoinfo " No BitCurator release requested. Getting latest release..."
+  REMOTETAG=$(git describe --tags `git rev-list --tags --max-count=1`)
+  git checkout $REMOTETAG
+else
+  echoinfo " BitCurator release $REQUESTEDTAG requested. Getting latest release..."
+  git checkout $REQUESTEDTAG
+fi
+
+cd ~/
 echoinfo " Installing BitCurator tools and scripts..."
-salt-call -l info --local state.sls bitcurator.primary pillar='{"bitcurator_version": "dev", "bitcurator_user": '$USERID'}'
+#salt-call -l info --local state.sls bitcurator.primary pillar='{"bitcurator_version": "dev", "bitcurator_user": '$USERID'}'
 
-
+echoinfo " Cleaning up..."
+rm -rf /srv/salt
