@@ -13,7 +13,7 @@ Looking for a pre-built VM of the latest release? You can find it at https://git
 
 ## Pre-Installation Steps
 
-Create a fresh Ubuntu 18.04LTS environment in a VM or on a dedicated host. You can find the official Ubuntu ISO on the [Download Ubuntu Desktop](https://ubuntu.com/download/desktop) page, and detailed installation instructions in the [Install Ubuntu desktop](https://ubuntu.com/tutorials/tutorial-install-ubuntu-desktop#1-overview) tutorial.
+First, install Ubuntu 18.04LTS. You can find the official Ubuntu ISO on the [Download Ubuntu Desktop](https://ubuntu.com/download/desktop) page, and detailed installation instructions in the [Install Ubuntu desktop](https://ubuntu.com/tutorials/tutorial-install-ubuntu-desktop#1-overview) tutorial.
 
 Log in and open a terminal. You can find the terminal icon by clicking on the "Show applications" icon in the bottom of the dock and typing "term" in the search field that appears. Click in the terminal window and enter the following command to install git:
 
