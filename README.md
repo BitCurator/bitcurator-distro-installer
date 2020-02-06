@@ -7,9 +7,9 @@ Install script for the BitCurator distro tools and configuration files
 [![GitHub forks](https://img.shields.io/github/forks/bitcurator/bitcurator-distro-installer.svg)](https://github.com/bitcurator/bitcurator-distro-installer/network)
 [![Twitter Follow](https://img.shields.io/twitter/follow/bitcurator.svg?style=social&label=Follow)](https://twitter.com/bitcurator)
 
-This repo provides a simple bash script to download the relevant components and build the BitCurator environment in Ubuntu 18.04LTS using the salt states and supporting files provided by https://github.com/bitcurator/bitcurator-distro-salt.
+This repo provides a simple bash script to build the BitCurator environment in your existing Ubuntu 18.04LTS using the automation tooling provided by https://github.com/bitcurator/bitcurator-distro-salt.
 
-Visit https://github.com/BitCurator/bitcurator-distro/wiki/Releases to download the latest official release!
+Looking for a pre-built VM of the latest release? You can find it at https://github.com/BitCurator/bitcurator-distro/wiki/Releases.
 
 ## Pre-Installation Steps
 
