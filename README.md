@@ -13,11 +13,9 @@ Looking for a pre-built VM of the latest release? You can find it at https://git
 
 ## Pre-Installation Steps
 
-Create a fresh Ubuntu 18.04LTS environment in a VM or on a dedicated host. Official releases are created with the hostname **bitcurator** and the username **bcadmin**, but you may use any desired hostname and username. Log in and execute the following in a terminal:
+Create a fresh Ubuntu 18.04LTS environment in a VM or on a dedicated host. Official releases are created with the hostname **bitcurator** and the username **bcadmin**, but you may use any desired hostname and username. Log in and type the following in a terminal to install git:
 
 ```shell
-sudo apt-get update
-sudo apt-get dist-upgrade
 sudo apt install git
 ```
 
